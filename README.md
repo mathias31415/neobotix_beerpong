@@ -8,6 +8,7 @@ In this project a ROS2 implementation for the Neobotix MMO500 and the UR5 was se
 
 ## Video
 This video shows the end results of our project:
+
 TODO
 
 ## Software architecture
@@ -16,4 +17,5 @@ All ros2 packages of this project are linked in the folder [ros2-packages](https
 TODO
 
 ## How-To use
+
 TODO
