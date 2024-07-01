@@ -9,7 +9,7 @@ In this project a ROS2 implementation for the Neobotix MMO500 and the UR5 was se
 ## Video
 This [YouTube video](https://www.youtube.com/watch?v=gvZ-DCJvOs4) shows the results of our project:
 
-[![Video abspielen](https://img.youtube.com/vi/gvZ-DCJvOs4/0.jpg)](https://www.youtube.com/watch?v=gvZ-DCJvOs4)
+[![Video abspielen](images/VideoPreview.png)](https://www.youtube.com/watch?v=gvZ-DCJvOs4)
 
 ## Software architecture
 All ros2 packages of this project are linked in the folder [ros2-packages](https://github.com/mathias31415/neobotix_beerpong/tree/main/ros2-packages).
