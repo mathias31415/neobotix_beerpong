@@ -11,11 +11,11 @@ This [YouTube video](https://www.youtube.com/watch?v=gvZ-DCJvOs4) shows the resu
 
 [![Video abspielen](images/VideoPreview.png)](https://www.youtube.com/watch?v=gvZ-DCJvOs4)
 
-## Software architecture
+## Software
 All ros2 packages of this project are linked in the folder [ros2-packages](https://github.com/mathias31415/neobotix_beerpong/tree/main/ros2-packages).
 
-TODO
+When everything was running on the neobotix platform PC, all CPUs were fully utilized. This led to problems. We therefore moved parts of the program to other laptops. The laptops are connected either in a shared wifi Network or via ssh as shown in the following graphic.
 
-## How-To use
+![system_overview](images/system_overview.png)
 
-TODO
+To find out how to use and start the individual ros2 repos, please refer to the readmes of the repos linked in the [ros2-packages](https://github.com/mathias31415/neobotix_beerpong/tree/main/ros2-packages) folder.
