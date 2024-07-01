@@ -9,4 +9,4 @@
 	url = https://github.com/RobinWolf/ROS2_Realsense_D415C.git
 [submodule "ros2-packages/Docker_Website_Beerpong"]
 	path = ros2-packages/Docker_Website_Beerpong
-	url = https://github.com/MauriceDroll/Docker_Website_Beerpong.git
+	url = https://github.com/MauriceDroll/Docker_Website_Beerpong
