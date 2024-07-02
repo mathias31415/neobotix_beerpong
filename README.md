@@ -43,5 +43,27 @@ When everything was running on the neobotix platform PC, all CPUs were fully uti
 
 
 ## How-To Use
-
+### PC Neobotix
+Clone/ download the ros2-packages `neobotix_mmo500_driver` and `realsense_driver` and launch them with the following commands:
+```
 TODO
+```
+
+### Laptop on the Neobotix
+This laptop is placed on the Neobotix platform and connected to it via an Ethernet cable. Additionally, the laptop is on the same Wi-Fi network as the other laptops. Clone/ download the ros2-package `ur_ros2_driver_humble` and launch it with the following commands:
+```
+TODO
+```
+
+### Controller Laptop
+Clone/ download the ros2-package `neobotix_mmo500_driver` and launch it and connect to the Neobotics pc via ssh with the following commands:
+```
+TODO
+```
+
+### User Laptop
+Clone/ download the ros2-packages `neobotix_coordinator` and `docker_website_beerpong` and launch them with the following commands:
+```
+TODO
+```
+You can then access the website at http://127.0.0.1:8080/ and choose the table.
