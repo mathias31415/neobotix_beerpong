@@ -1,0 +1,40 @@
+[1.148s] Invoking command in '/home/robot/ros_ws/src/r2e_tutorial': PYTHONPATH=/home/robot/ros_ws/src/build/r2e_tutorial/prefix_override:/home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/r2e_tutorial build --build-base /home/robot/ros_ws/src/build/r2e_tutorial/build install --record /home/robot/ros_ws/src/build/r2e_tutorial/install.log --single-version-externally-managed
+[1.515s] running egg_info
+[1.515s] creating ../build/r2e_tutorial/r2e_tutorial.egg-info
+[1.516s] writing ../build/r2e_tutorial/r2e_tutorial.egg-info/PKG-INFO
+[1.516s] writing dependency_links to ../build/r2e_tutorial/r2e_tutorial.egg-info/dependency_links.txt
+[1.516s] writing entry points to ../build/r2e_tutorial/r2e_tutorial.egg-info/entry_points.txt
+[1.516s] writing requirements to ../build/r2e_tutorial/r2e_tutorial.egg-info/requires.txt
+[1.516s] writing top-level names to ../build/r2e_tutorial/r2e_tutorial.egg-info/top_level.txt
+[1.516s] writing manifest file '../build/r2e_tutorial/r2e_tutorial.egg-info/SOURCES.txt'
+[1.519s] reading manifest file '../build/r2e_tutorial/r2e_tutorial.egg-info/SOURCES.txt'
+[1.521s] writing manifest file '../build/r2e_tutorial/r2e_tutorial.egg-info/SOURCES.txt'
+[1.521s] running build
+[1.521s] running build_py
+[1.522s] creating /home/robot/ros_ws/src/build/r2e_tutorial/build
+[1.522s] creating /home/robot/ros_ws/src/build/r2e_tutorial/build/lib
+[1.522s] creating /home/robot/ros_ws/src/build/r2e_tutorial/build/lib/r2e_tutorial
+[1.522s] copying r2e_tutorial/example.py -> /home/robot/ros_ws/src/build/r2e_tutorial/build/lib/r2e_tutorial
+[1.522s] copying r2e_tutorial/__init__.py -> /home/robot/ros_ws/src/build/r2e_tutorial/build/lib/r2e_tutorial
+[1.523s] running install
+[1.523s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.523s]   warnings.warn(
+[1.523s] running install_lib
+[1.524s] creating /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial
+[1.524s] copying /home/robot/ros_ws/src/build/r2e_tutorial/build/lib/r2e_tutorial/example.py -> /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial
+[1.525s] copying /home/robot/ros_ws/src/build/r2e_tutorial/build/lib/r2e_tutorial/__init__.py -> /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial
+[1.525s] byte-compiling /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial/example.py to example.cpython-310.pyc
+[1.527s] byte-compiling /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial/__init__.py to __init__.cpython-310.pyc
+[1.527s] running install_data
+[1.528s] creating /home/robot/ros_ws/src/install/r2e_tutorial/share/ament_index
+[1.528s] creating /home/robot/ros_ws/src/install/r2e_tutorial/share/ament_index/resource_index
+[1.528s] creating /home/robot/ros_ws/src/install/r2e_tutorial/share/ament_index/resource_index/packages
+[1.528s] copying resource/r2e_tutorial -> /home/robot/ros_ws/src/install/r2e_tutorial/share/ament_index/resource_index/packages
+[1.528s] copying package.xml -> /home/robot/ros_ws/src/install/r2e_tutorial/share/r2e_tutorial
+[1.528s] running install_egg_info
+[1.531s] Copying ../build/r2e_tutorial/r2e_tutorial.egg-info to /home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages/r2e_tutorial-0.0.0-py3.10.egg-info
+[1.533s] running install_scripts
+[1.567s] Installing example script to /home/robot/ros_ws/src/install/r2e_tutorial/lib/r2e_tutorial
+[1.568s] Installing house script to /home/robot/ros_ws/src/install/r2e_tutorial/lib/r2e_tutorial
+[1.568s] writing list of installed files to '/home/robot/ros_ws/src/build/r2e_tutorial/install.log'
+[1.632s] Invoked command in '/home/robot/ros_ws/src/r2e_tutorial' returned '0': PYTHONPATH=/home/robot/ros_ws/src/build/r2e_tutorial/prefix_override:/home/robot/ros_ws/src/install/r2e_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/r2e_tutorial build --build-base /home/robot/ros_ws/src/build/r2e_tutorial/build install --record /home/robot/ros_ws/src/build/r2e_tutorial/install.log --single-version-externally-managed

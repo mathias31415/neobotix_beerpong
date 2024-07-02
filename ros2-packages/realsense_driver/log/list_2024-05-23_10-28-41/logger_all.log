@@ -1,0 +1,60 @@
+[2.471s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/robin/hka_projects/Robogistics_Neobotix/Realsense']
+[2.472s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/robin/hka_projects/Robogistics_Neobotix/Realsense'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x70645cf37010>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x70645d09b430>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x70645d09b430>>)
+[2.647s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.647s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.647s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.648s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.648s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.648s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robin/hka_projects/Robogistics_Neobotix/Realsense'
+[2.648s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['ignore', 'ignore_ament_install']
+[2.649s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'ignore'
+[2.649s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'ignore_ament_install'
+[2.649s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['colcon_pkg']
+[2.650s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'colcon_pkg'
+[2.650s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['colcon_meta']
+[2.650s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'colcon_meta'
+[2.650s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['ros']
+[2.650s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'ros'
+[2.689s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['cmake', 'python']
+[2.690s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'cmake'
+[2.690s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'python'
+[2.690s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extensions ['python_setup_py']
+[2.690s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense) by extension 'python_setup_py'
+[2.691s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/log) by extensions ['ignore', 'ignore_ament_install']
+[2.691s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/log) by extension 'ignore'
+[2.691s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/log) ignored
+[2.691s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['ignore', 'ignore_ament_install']
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'ignore'
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'ignore_ament_install'
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['colcon_pkg']
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'colcon_pkg'
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['colcon_meta']
+[2.692s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'colcon_meta'
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['ros']
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'ros'
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['cmake', 'python']
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'cmake'
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'python'
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extensions ['python_setup_py']
+[2.693s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src) by extension 'python_setup_py'
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extension 'ignore'
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extension 'ignore_ament_install'
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extensions ['colcon_pkg']
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extension 'colcon_pkg'
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extensions ['colcon_meta']
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extension 'colcon_meta'
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extensions ['ros']
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces) by extension 'ros'
+[2.702s] DEBUG:colcon.colcon_core.package_identification:Package '/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/camera_interfaces' with type 'ros.ament_cmake' and name 'camera_interfaces'
+[2.703s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extensions ['ignore', 'ignore_ament_install']
+[2.703s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extension 'ignore'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extension 'ignore_ament_install'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extensions ['colcon_pkg']
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extension 'colcon_pkg'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extensions ['colcon_meta']
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extension 'colcon_meta'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extensions ['ros']
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415) by extension 'ros'
+[2.706s] DEBUG:colcon.colcon_core.package_identification:Package '/home/robin/hka_projects/Robogistics_Neobotix/Realsense/src/neobotix_realsense415' with type 'ros.ament_python' and name 'neobotix_realsense415'
+[2.707s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

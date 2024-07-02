@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <Action ID="SetVelocity" velocity_scaling="0.05"/>
+            <Repeat num_cycles="6">
+                <SubTree ID="SubTree" name="GetCupFromHolder"/>
+            </Repeat>
+            <Action ID="SetVelocity" velocity_scaling="0.05"/>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="SubTree">
+        <Sequence>
+            <Action ID="SetVelocity" velocity_scaling="0.05"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="0"/>
+            <!-- Basis Travel Pose -->
+            <Action ID="MoveArmToPoseLin" q_w="0.011181" q_x="-0.0051562" q_y="0.99992" q_z="0.0014938" x="0.11406" y="-0.00093093" z=" 0.34378"/>
+            <!-- Kamerapose-->
+            <Action ID="MoveArmToPoseLin" q_w=" 0.0013789" q_x="0.27168" q_y="0.96239" q_z="0.0019224" x="0.15292" y="0.040717" z="0.42044"/>
+            <!-- Approach 1-->
+            <Action ID="MoveArmToPoseLin" q_w="0.99961" q_x="-0.0016511" q_y=" -0.0045093" q_z=" -0.027443" x="-0.22446" y="-0.021245" z="0.48382"/>
+            <!-- Before Pick-->
+            <Action ID="MoveArmToPoseLin" q_w="0.99985" q_x="-0.0040532" q_y="-0.016529" q_z="0.003553" x="-0.26256" y="-0.31879" z=" 0.53087"/>
+            <!-- Greifpose zu-->
+            <Action ID="MoveArmToPoseLin" q_w=" 0.99985" q_x="-0.0037462" q_y=" -0.016459" q_z="0.0038428" x="-0.2624" y=" -0.31902" z="0.57952"/>
+            <!-- After pick-->
+            <Action ID="MoveArmToPoseLin" q_w="0.99985" q_x="-0.0037112" q_y=" -0.01697" q_z="0.0028614" x="-0.26285" y="-0.31859" z="0.39566"/>
+            <!-- Warten-->
+            <Action ID="Wait" seconds="2"/>
+            <!-- Greifer zu-->
+            <Action ID="MoveURGripper" fun="1" pin="10" state="1"/>
+            <!-- Warten-->
+            <Action ID="Wait" seconds="5"/>
+            <!-- After pick-->
+            <Action ID="MoveArmToPoseLin" q_w=" 0.84308" q_x="-0.012855" q_y="-0.011374" q_z="-0.53751" x="-0.39948" y="0.10615" z="0.39637"/>
+            <!-- PrePlace-->
+            <Action ID="MoveArmToPoseLin" q_w=" -0.0009871" q_x="0.0083262" q_y="0.99996" q_z="0.0036428" x="0.10292" y="0.38128" z="0.46478"/>
+        </Sequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="MoveArmToPoseLin">
+            <input_port name="q_w" type="float"/>
+            <input_port name="q_x" type="float"/>
+            <input_port name="q_y" type="float"/>
+            <input_port name="q_z" type="float"/>
+            <input_port name="x" type="float"/>
+            <input_port name="y" type="float"/>
+            <input_port name="z" type="float"/>
+        </Action>
+        <Action ID="MoveURGripper">
+            <input_port name="fun" type="int"/>
+            <input_port name="pin" type="int"/>
+            <input_port name="state" type="float"/>
+        </Action>
+        <Action ID="SetVelocity">
+            <input_port name="velocity_scaling" type="float"/>
+        </Action>
+        <SubTree ID="SubTree"/>
+        <Action ID="Wait">
+            <input_port name="seconds" type="int"/>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>

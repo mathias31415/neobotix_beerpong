@@ -1,0 +1,6 @@
+# Request
+int8 aruco_id
+---
+# Response
+geometry_msgs/TransformStamped transform_stamped # Orientation of the aruco marker
+bool found # True if the aruco marker was found

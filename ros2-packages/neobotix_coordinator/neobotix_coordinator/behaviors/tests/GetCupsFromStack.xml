@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <Action ID="SetVelocity" velocity_scaling="0.2"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="0"/>
+            <Action ID="MoveArmToJoints" joint1="-1.55" joint2="-1.83" joint3="-0.89" joint4="4.29" joint5="1.54" joint6="0"/>
+            <Action ID="MoveArmToJoints" joint1="1.15" joint2="-1.7" joint3="-2.32" joint4="5.60" joint5="4.71" joint6="-2.72"/>
+            <Action ID="SetVelocity" velocity_scaling="0.05"/>
+            <Action ID="MoveArmToPoseLin" q_w="1" q_x="-0.0036886" q_y="0.0029135" q_z="0.0002493" x="-0.26169" y="-0.31872" z="0.580"/> 
+            <Action ID="Wait" seconds="2"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="1"/>
+            <Action ID="Wait" seconds="2"/>
+            <Action ID="MoveArmToPoseLin" q_w="1" q_x="-0.0036886" q_y="0.0029135" q_z="0.0002493" x="-0.26169" y="-0.31872" z="0.42834"/>
+            <Action ID="MoveArmToPoseLin" q_w="1" q_x="-0.0036886" q_y="0.0029135" q_z="0.0002493" x="-0.3" y="0" z="0.42834"/>
+            <Action ID="SetVelocity" velocity_scaling="0.2"/>
+            <Action ID="MoveArmToJoints" joint1="-1.55" joint2="-1.83" joint3="-0.89" joint4="4.29" joint5=" 1.54" joint6="0"/>
+            <Action ID="GetArucoPosition" aruco_id="1" q_w="{q_w}" q_x="{q_x}" q_y="{q_y}" q_z="{q_z}" x="{x}" y="{y}" z="{z}"/>
+            <Action ID="GetTfMarkerToBase" aruco_id="1" base_frame="ur_base_link" max_seconds="5" q_w="{q_w}" q_x="{q_x}" q_y="{q_y}" q_z="{q_z}" x="{x}" y="{y}" z="{z}"/>
+            <Action ID="PlaceCup" cup_id="6" q_w="{q_w}" q_x="{q_x}" q_y="{q_y}" q_z="{q_z}" x="{x}" y="{y}" z="{z}"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="0"/>
+            <Action ID="MoveArmToJoints" joint1="-1.55" joint2="-1.83" joint3="-0.89" joint4="4.29" joint5="1.54" joint6="0"/>
+        </Sequence>
+    </BehaviorTree>
+
+    
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="GetArucoPosition">
+            <input_port name="aruco_id" type="int"/>
+            <output_port name="q_w" type="float"/>
+            <output_port name="q_x" type="float"/>
+            <output_port name="q_y" type="float"/>
+            <output_port name="q_z" type="float"/>
+            <output_port name="x" type="float"/>
+            <output_port name="y" type="float"/>
+            <output_port name="z" type="float"/>
+        </Action>
+        <Action ID="GetTfMarkerToBase">
+            <input_port name="aruco_id" type="int"/>
+            <input_port name="base_frame" type="std::string"/>
+            <input_port name="max_seconds" type="int"/>
+            <output_port name="q_w" type="float"/>
+            <output_port name="q_x" type="float"/>
+            <output_port name="q_y" type="float"/>
+            <output_port name="q_z" type="float"/>
+            <output_port name="x" type="float"/>
+            <output_port name="y" type="float"/>
+            <output_port name="z" type="float"/>
+        </Action>
+        <Action ID="MoveArmToJoints">
+            <input_port name="joint1" type="float"/>
+            <input_port name="joint2" type="float"/>
+            <input_port name="joint3" type="float"/>
+            <input_port name="joint4" type="float"/>
+            <input_port name="joint5" type="float"/>
+            <input_port name="joint6" type="float"/>
+        </Action>
+        <Action ID="MoveArmToPoseLin">
+            <input_port name="q_w" type="float"/>
+            <input_port name="q_x" type="float"/>
+            <input_port name="q_y" type="float"/>
+            <input_port name="q_z" type="float"/>
+            <input_port name="x" type="float"/>
+            <input_port name="y" type="float"/>
+            <input_port name="z" type="float"/>
+        </Action>
+        <Action ID="MoveURGripper">
+            <input_port name="fun" type="int"/>
+            <input_port name="pin" type="int"/>
+            <input_port name="state" type="float"/>
+        </Action>
+        <Action ID="PlaceCup">
+            <input_port name="cup_id" type="int"/>
+            <input_port name="q_w" type="float"/>
+            <input_port name="q_x" type="float"/>
+            <input_port name="q_y" type="float"/>
+            <input_port name="q_z" type="float"/>
+            <input_port name="x" type="float"/>
+            <input_port name="y" type="float"/>
+            <input_port name="z" type="float"/>
+        </Action>
+        <Action ID="SetVelocity">
+            <input_port name="velocity_scaling" type="float"/>
+        </Action>
+        <Action ID="Wait">
+            <input_port name="seconds" type="int"/>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- jQuery einbinden -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="init()">
+    <h1>Mobile Robotics</h1>
+    <h2>Bitte wählen sie einen Tisch:</h2>
+    <div class="container">
+        <button id="button1" onclick="buttonClicked(1)">Tisch 1</button>
+        <button id="button2" onclick="buttonClicked(2)">Tisch 2</button>
+        <button id="button3" onclick="buttonClicked(3)">Tisch 3</button>
+    </div>
+
+    <script>
+        function buttonClicked(buttonId) {
+            $.post('/button_click', { button_id: buttonId }, function(response) {
+                alert(response.message);
+            });
+        }
+        function init() {
+            $.post('/init', function(response) {
+                alert(response.message);
+            });
+        }
+    </script>
+</body>
+</html>

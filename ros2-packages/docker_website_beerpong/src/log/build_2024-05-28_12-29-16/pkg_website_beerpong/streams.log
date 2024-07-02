@@ -1,0 +1,50 @@
+[1.166s] Invoking command in '/home/robot/ros_ws/src/pkg_website_beerpong': PYTHONPATH=/home/robot/ros_ws/src/build/pkg_website_beerpong/prefix_override:/home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/pkg_website_beerpong build --build-base /home/robot/ros_ws/src/build/pkg_website_beerpong/build install --record /home/robot/ros_ws/src/build/pkg_website_beerpong/install.log --single-version-externally-managed
+[1.518s] running egg_info
+[1.518s] creating ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info
+[1.519s] writing ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/PKG-INFO
+[1.519s] writing dependency_links to ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/dependency_links.txt
+[1.519s] writing entry points to ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/entry_points.txt
+[1.520s] writing requirements to ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/requires.txt
+[1.520s] writing top-level names to ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/top_level.txt
+[1.520s] writing manifest file '../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/SOURCES.txt'
+[1.523s] reading manifest file '../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/SOURCES.txt'
+[1.523s] adding license file 'LICENSE'
+[1.524s] writing manifest file '../build/pkg_website_beerpong/pkg_website_beerpong.egg-info/SOURCES.txt'
+[1.524s] running build
+[1.524s] running build_py
+[1.525s] creating /home/robot/ros_ws/src/build/pkg_website_beerpong/build
+[1.525s] creating /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib
+[1.525s] creating /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.525s] copying pkg_website_beerpong/__init__.py -> /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.525s] copying pkg_website_beerpong/SelectTablePublisher.py -> /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.526s] copying pkg_website_beerpong/SelectedTable.py -> /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.526s] copying pkg_website_beerpong/app.py -> /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.526s] copying pkg_website_beerpong/website_beerpong.py -> /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong
+[1.526s] running install
+[1.526s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.527s]   warnings.warn(
+[1.527s] running install_lib
+[1.528s] creating /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.528s] copying /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong/__init__.py -> /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.528s] copying /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong/SelectTablePublisher.py -> /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.529s] copying /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong/SelectedTable.py -> /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.529s] copying /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong/app.py -> /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.529s] copying /home/robot/ros_ws/src/build/pkg_website_beerpong/build/lib/pkg_website_beerpong/website_beerpong.py -> /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong
+[1.530s] byte-compiling /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong/__init__.py to __init__.cpython-310.pyc
+[1.530s] byte-compiling /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong/SelectTablePublisher.py to SelectTablePublisher.cpython-310.pyc
+[1.531s] byte-compiling /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong/SelectedTable.py to SelectedTable.cpython-310.pyc
+[1.531s] byte-compiling /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong/app.py to app.cpython-310.pyc
+[1.532s] byte-compiling /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong/website_beerpong.py to website_beerpong.cpython-310.pyc
+[1.533s] running install_data
+[1.534s] creating /home/robot/ros_ws/src/install/pkg_website_beerpong/share/ament_index
+[1.534s] creating /home/robot/ros_ws/src/install/pkg_website_beerpong/share/ament_index/resource_index
+[1.534s] creating /home/robot/ros_ws/src/install/pkg_website_beerpong/share/ament_index/resource_index/packages
+[1.534s] copying resource/pkg_website_beerpong -> /home/robot/ros_ws/src/install/pkg_website_beerpong/share/ament_index/resource_index/packages
+[1.535s] copying package.xml -> /home/robot/ros_ws/src/install/pkg_website_beerpong/share/pkg_website_beerpong
+[1.535s] creating /home/robot/ros_ws/src/install/pkg_website_beerpong/share/pkg_website_beerpong/launch
+[1.535s] running install_egg_info
+[1.537s] Copying ../build/pkg_website_beerpong/pkg_website_beerpong.egg-info to /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages/pkg_website_beerpong-0.0.0-py3.10.egg-info
+[1.538s] running install_scripts
+[1.575s] Installing website_beerpong script to /home/robot/ros_ws/src/install/pkg_website_beerpong/lib/pkg_website_beerpong
+[1.576s] writing list of installed files to '/home/robot/ros_ws/src/build/pkg_website_beerpong/install.log'
+[1.622s] Invoked command in '/home/robot/ros_ws/src/pkg_website_beerpong' returned '0': PYTHONPATH=/home/robot/ros_ws/src/build/pkg_website_beerpong/prefix_override:/home/robot/ros_ws/src/install/pkg_website_beerpong/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/pkg_website_beerpong build --build-base /home/robot/ros_ws/src/build/pkg_website_beerpong/build install --record /home/robot/ros_ws/src/build/pkg_website_beerpong/install.log --single-version-externally-managed

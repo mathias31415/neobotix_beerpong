@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <!--Move Neobotix Base  to table-->
+            <MoveBase x="-5.54769" y="2.87302"/> 
+            <Action ID="SetVelocity" velocity_scaling="0.2"/>
+            
+            <!--Move UR to Auroco detection pose and get Aruco Position-->
+            <Action ID="MoveArmToJoints" joint1="-0.994837" joint2="-1.4137" joint3="-1.5533" joint4="4.555" joint5="1.53" joint6="0.5759"/>
+            <Action ID="GetArucoPosition" aruco_id="1" x="{x}" y="{y}" z="{z}" q_x="{q_x}" q_y="{q_y}" q_z="{q_z}" q_w="{q_w}"/>
+
+            <!--Pick cup-->
+            <Action ID="SetVelocity" velocity_scaling="0.1"/>
+            <Action ID="MoveArmToPoseLin" x="-0.01" y="0.38" z="0.5" q_x="0.0" q_y="1.0" q_z="0.0" q_w="0.0"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="1.0"/> <!--Close Gripper-->
+            
+            <!--Move UR to safe pre cup place position-->
+            <Action ID="MoveArmToPoseLin" x="-0.01" y="0.38" z="0.5" q_x="0.0" q_y="1.0" q_z="0.0" q_w="0.0"/>
+            
+            <!--Place Cup-->
+            <Action ID="MoveArmToPoseLin" x="-0.01" y="0.38" z="0.5" q_x="0.0" q_y="1.0" q_z="0.0" q_w="0.0"/>
+            <Action ID="MoveURGripper" fun="1" pin="10" state="1.0"/> <!--Open Gripper-->
+            <Action ID="MoveArmToPoseLin" x="-0.01" y="0.38" z="0.5" q_x="0.0" q_y="1.0" q_z="0.0" q_w="0.0"/>
+            
+            <!--Move Neobotix Base  to HomeBase-->
+            <Action ID="MoveArmToPoseLin" x="-0.01" y="0.38" z="0.5" q_x="0.0" q_y="1.0" q_z="0.0" q_w="0.0"/> <!--MoveArmToSafePosition-->
+            <MoveBase x="0.79" y="9.90"/>
+        
+        </Sequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="AlwaysFailureNode"/>
+        <Action ID="ArmMovement">
+            <input_port name="gripper" type="float"/>
+            <input_port name="x" type="float"/>
+            <input_port name="y" type="float"/>
+            <input_port name="z" type="float"/>
+        </Action>
+        <Action ID="BaseMovement">
+            <input_port name="quaternion_w" type="float"/>
+            <input_port name="quaternion_x" type="float"/>
+            <input_port name="quaternion_y" type="float"/>
+            <input_port name="quaternion_z" type="float"/>
+            <input_port name="x" type="float"/>
+            <input_port name="y" type="float"/>
+        </Action>
+        <Action ID="BatteryCharging">
+            <input_port name="goal_percentage" type="float"/>
+        </Action>
+        <Decorator ID="BehaviorSwitch"/>
+        <Condition ID="CheckBattery">
+            <input_port name="battery_level" type="float"/>
+        </Condition>
+        <Condition ID="CheckBlackboard">
+            <input_port name="compare_to" type="std::string"/>
+            <input_port name="input" type="std::string"/>
+        </Condition>
+        <Condition ID="CheckBoxGrabbed"/>
+        <Condition ID="CheckDiagnosticStatus"/>
+        <Condition ID="CheckPatientCondition"/>
+        <Condition ID="CheckStop"/>
+        <Action ID="DevicePairing">
+            <input_port name="device_type" type="int"/>
+            <input_port name="pairing_mode" type="int"/>
+        </Action>
+        <Action ID="FloatParameterRequest">
+            <input_port name="default_value" type="std::string"/>
+            <input_port name="key" type="std::string"/>
+            <input_port name="max" type="std::string"/>
+            <input_port name="min" type="std::string"/>
+            <input_port name="msg" type="std::string"/>
+            <input_port name="options" type="std::string"/>
+            <input_port name="title" type="std::string"/>
+            <output_port name="value" type="float"/>
+        </Action>
+        <Action ID="GetBoxPickPosition">
+            <input_port name="marker_frame" type="std::string"/>
+            <output_port name="quaternion_w" type="float"/>
+            <output_port name="quaternion_x" type="float"/>
+            <output_port name="quaternion_y" type="float"/>
+            <output_port name="quaternion_z" type="float"/>
+            <output_port name="x" type="float"/>
+            <output_port name="y" type="float"/>
+            <output_port name="z" type="float"/>
+        </Action>
+        <Action ID="IntParameterRequest">
+            <input_port name="default_value" type="std::string"/>
+            <input_port name="key" type="std::string"/>
+            <input_port name="max" type="std::string"/>
+            <input_port name="min" type="std::string"/>
+            <input_port name="msg" type="std::string"/>
+            <input_port name="options" type="std::string"/>
+            <input_port name="title" type="std::string"/>
+            <output_port name="value" type="int"/>
+        </Action>
+        <Action ID="RetryNode">
+            <input_port name="num_attempts" type="int"/>
+        </Action>
+        <Action ID="StringParameterRequest">
+            <input_port name="default_value" type="std::string"/>
+            <input_port name="key" type="std::string"/>
+            <input_port name="max" type="std::string"/>
+            <input_port name="min" type="std::string"/>
+            <input_port name="msg" type="std::string"/>
+            <input_port name="options" type="std::string"/>
+            <input_port name="title" type="std::string"/>
+            <output_port name="value" type="std::string"/>
+        </Action>
+        <Action ID="UserAuthentication">
+            <output_port name="access" type="std::string"/>
+            <input_port name="required_user_level" type="int"/>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>

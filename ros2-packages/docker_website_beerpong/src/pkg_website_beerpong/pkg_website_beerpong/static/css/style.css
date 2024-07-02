@@ -1,0 +1,63 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/Karte_Visualisierung.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.container {
+    padding-left: 110px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: 'Aptos', sans-serif;
+
+}
+
+button:hover {
+    background-color: #f70a8c;
+}
+@font-face {
+    font-family: 'Aptos';
+    src: url('fonts/Aptos-Regular.woff2') format('woff2'),
+         url('fonts/Aptos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Aptos', sans-serif;
+    color: #3A3A3A;
+    padding-left: 120px;
+    padding-top: 50px;
+
+}
+
+
+h2 {
+    font-family: 'Aptos', sans-serif;
+    color: #3A3A3A;
+    padding-left: 120px;
+    padding-top: 20px;
+}

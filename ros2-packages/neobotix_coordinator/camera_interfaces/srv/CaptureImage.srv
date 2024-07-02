@@ -1,0 +1,5 @@
+# Request - none for this service
+---
+# Response
+sensor_msgs/Image image
+bool success

@@ -1,0 +1,3 @@
+[console_scripts]
+website_beerpong = pkg_website_beerpong.website_beerpong:main
+
