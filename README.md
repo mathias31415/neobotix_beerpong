@@ -44,22 +44,106 @@ When everything was running on the neobotix platform PC, all CPUs were fully uti
 
 ## How-To Use
 ### PC Neobotix
+Plug in the display-port cable to a monitor and connect keyboard and mouse to the neobotix.
 Clone/ download the ros2-packages `neobotix_mmo500_driver` and `realsense_driver` and launch them with the following commands:
 ```
-TODO
+git clone https://github.com/mathias31415/neobotix_beerpong.git
 ```
+build the docker images:
+```
+cd neobotix_beerpong/ros2-packages/neobotix_mmo500_driver
+./build_docker.sh
+
+cd neobotix_beerpong/ros2-packages/realsense_driver
+./build_docker.sh
+```
+start the neobotix driver package:
+```
+cd neobotix_beerpong/ros2-packages/neobotix_mmo500_driver
+./start_docker.sh
+```
+all needed nodes will be launched in autostarty now you should be able to drive the neobotix with the logitech controller
 
 ### Laptop on the Neobotix
-This laptop is placed on the Neobotix platform and connected to it via an Ethernet cable. Additionally, the laptop is on the same Wi-Fi network as the other laptops. Clone/ download the ros2-package `ur_ros2_driver_humble` and launch it with the following commands:
+This laptop is placed on the Neobotix platform and connected to it via an Ethernet cable to the UR-Control. Additionally, the laptop is on the same Wi-Fi network as the other laptops. Clone/ download the ros2-package `ur_ros2_driver_humble` and launch it with the following commands:
 ```
-TODO
+git clone neobotix_beerpong/ros2-packages/ur_ros2_driver_humble
 ```
+build and run the container:
+```
+cd neobotix_beerpong/ros2-packages/ur_ros2_driver_humble
+./build_ur.sh
+./start_ur.sh
+```
+all nodes will bei started in autostart and rviz should launch.
+Select and run the UR-Cap "External Control" on the UR-Teachpad.
+Now you should be able to control the robot arm via Rviz.
 
 ### Controller Laptop
 Clone/ download the ros2-package `neobotix_mmo500_driver` and launch it and connect to the Neobotics pc via ssh with the following commands:
 ```
-TODO
+git clone https://github.com/mathias31415/neobotix_beerpong.git
 ```
+build and run the docker images (NOTE: at this point its recommendet to deactivate your WIFI, because if not there can be interfernces with the container running on the neobotix):
+```
+cd neobotix_beerpong/ros2-packages/neobotix_mmo500_driver
+./build_docker.sh
+./start_docker.sh
+````
+now switch back to the shared WIFI and connect one terminal to the running container:
+```
+docker exec -it neobotix_mmo500_bringup bash
+```
+start Rviz visualization for navigation or mapping:
+```
+ros2 launch neo_nav2_bringup rviz_launch.py
+```
+at this point there should be not that much visible in Rviz, you can check if you can see the neobotix-hosted nodes in the terminal to verify the connection between the containers.
+
+open another terminal and connect via ssh to the neobotix-pc:
+```
+ssh neobotix@172.22.32.11 (password: neobotix)
+```
+[**]
+connect to the driver container and start the navigation:
+```
+docker exec -it neobotix_mmo500_bringup bash
+ros2 launch neo_mpo_500-2 navigation.launch.py
+```
+Wait until all lifecycle nodes are up, now you should see the robot model, map and costmaps in Rviz.
+After setting the initial pose of the robot in the map, you use the navigation by publishing Nav2Goals.
+
+If you dont want to use the navigation mode, but want to record a naw map, switch back to [**], pass the navigation instructions and follow the mapping instructions: 
+connect to the driver container and start the mapping:
+```
+docker exec -it neobotix_mmo500_bringup bash
+ros2 launch neo_mpo_500-2 mapping.launch.py
+```
+Now drive the neobotix with the controller round the area you want to map (Note: only the front scanner is used for mapping):
+The map will be created step by step. The process can be viewed in the poened Rviz window.
+
+If you are finished, save the map:
+open another terminal, connect it vis ssh to the neobotix and attach it to the running container:
+```
+ssh neobotix@172.22.32.11 (password: neobotix)
+docker exec -it neobotix_mmo500_bringup bash
+```
+save the map with your name:
+```
+ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/src/neo_mpo_500-2-humble/configs/navigation/maps/<your_map_name_without_file_extention>
+```
+if finished you can close the 2 terminals and run the navigation with your new map (launch argument map:=<your_map_name.yaml>
+
+Moreover you have to start the realsense camera nodes on the neobotix.
+Therefore, plug in the USB-Cable from the camera into an open neobotix port (Node: cable has to be outside of the scanner safety-field)
+open another Terminal, connect via ssh to the neobotix and start the realsense container:
+```
+ssh neobotix@172.22.32.11 (password: neobotix)
+cd neobotix_beerpong/ros2-packages/realsense_driver
+./start_docker.sh
+```
+all nodes should be launched in autostart. If you recieve the feedback "Realsense Node is up!" in the terminal, everything is fine.
+
 
 ### User Laptop
 Clone/ download the ros2-packages `neobotix_coordinator` and `docker_website_beerpong` and launch them with the following commands:
