@@ -24,16 +24,9 @@ The website runs with flask and python3.
 
 navigate in your browser to: http://127.0.0.1:8080/
 
-
-
-
 # How to request the service /table_server
 
 ros2 service call /table_server select_table_interfaces/srv/TableSelect "{request: True}
 
 # ROS Domain ID
 53
-
-# TO- DO
-
-- Autostart via ros2 launch
