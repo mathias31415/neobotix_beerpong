@@ -142,18 +142,25 @@ All the nodes should be launched automatically. If you receive the feedback "Rea
 The instruction readme for the 
 Clone/download the `neobotix_coordinator` and `docker_website_beerpong` ROS2 packages and launch them with the following commands:
 
-Build and start the Docker container
+Build and start both Docker containers with the following commands in the respective directories (2 terminals).
 ```bash
 source build_docker.sh
 source start_docker.sh
 ```
+Inside the docker_website_beerpong container, start the website:
+1. Navigate to ros2_ws
+2. `colcon build`
+3. `source install/setup.bash`
+4. Navigate to `src/pkg_website_beerpong/pkg_website_beerpong`
+5. start it with: `python3 app.py`
 
-Inside the container, launch the Coordinator node with parameters:
+You can then access the website at http://127.0.0.1:8080/ and choose the table.
+
+Inside the neobotix_coordinator container, launch the Coordinator node with parameters:
 ```
 # in neobotix_coordinator docker
 
 ros2 launch neobotix_coordinator neobotix.launch.py
 ```
-You can then access the website at http://127.0.0.1:8080/ and choose the table.
 
 For further details on how to customize the behavior tree, please refer to the [readme](https://github.com/LeoSc4/neobotix_coordinator/blob/main/README.md) of the `neobotix_coordinator` package.
